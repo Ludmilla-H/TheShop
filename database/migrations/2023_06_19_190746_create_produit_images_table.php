@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
 
             $table->foreignId('produit_id')->constrained();
-            $table->integer('position')->defaults(1);
+            $table->integer('position')->default(1);
             $table->string('image');
 
             $table->timestamps();
