@@ -20,6 +20,8 @@ return new class extends Migration
             $table->string('name' , 100);
             $table->text('description')->nullable();
             $table->float('price' , 10)->nullable();
+            $table->text('defaultImage')->nullable();
+            $table->text('carouselImage')->nullable();
 
             $table->timestamps();
         });
