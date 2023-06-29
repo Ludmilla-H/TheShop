@@ -10,6 +10,10 @@
 
 </head>
 <body>
+
+    <x-navbar/>
+    <x-categorie-menu/>
+
     @yield('main')
 
 

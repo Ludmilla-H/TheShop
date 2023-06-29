@@ -37,6 +37,7 @@ class ProduitResource extends Resource
                 Forms\Components\FileUpload::make('defaultImage'),
                 Forms\Components\FileUpload::make('carouselImage')
                     ->multiple()
+                    ->image()
                     ->minFiles(1)
                     ->maxFiles(4),
                 
