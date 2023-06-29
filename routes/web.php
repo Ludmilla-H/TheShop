@@ -20,6 +20,7 @@ use App\Http\Controllers\ProfileController;
 });*/
 Route::get('/', [ProductController::class, 'index'])->name('accueil');
 Route::get('/categorie/{id}', [ProductController::class, 'index'])->name('categorie');
+Route::get('/detail/{product}', [ProductController::class, 'detail'])->name('detail');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

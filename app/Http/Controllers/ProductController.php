@@ -11,13 +11,13 @@ class ProductController extends Controller {
         //Lister tout les produits
 
         if ($id !== 0){
-            //requete de classement 
+            //requete de classement = where
         $products = Produit::where('categorie_id' , $id)
                             ->orderBy('created_at', 'desc')
                             ->paginate(6);
 
         } else {
-            //requete de filtration
+            //requete de filtration = orderBy
         $products = Produit::orderBy('created_at', 'desc') 
                             ->paginate(6);
 
@@ -28,5 +28,14 @@ class ProductController extends Controller {
         return view ('welcome' , compact('products'));
 
     }
+
+    public function detail (Produit $product) {
+
+    return view ('detail' , compact ('product'));
+
+
+
+    }
+
     //
 }
